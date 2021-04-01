@@ -6,7 +6,8 @@
   "scripts": {
     "brk": "node --inspect-brk example/run.js",
     "example": "rollup -c example/rollup.config.js",
-    "test:dev": "jest --watchAll"
+    "test:dev": "jest --watchAll",
+    "np": "np --no-cleanup --no-tests --any-branch"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "generate-source-map": "0.0.5",
     "jest": "^24.5.0",
+    "np": "^7.4.0",
     "rollup": "^1.7.4",
     "rollup-plugin-virtual": "^1.0.1"
   },
