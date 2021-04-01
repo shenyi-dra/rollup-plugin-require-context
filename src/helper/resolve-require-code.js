@@ -24,8 +24,11 @@ module.exports = function genRequireCode(baseDirname, modules) {
     const moduleName = `require_context_module_${uid}_${index}`;
 
     const moduleAbsolutePath = Path.resolve(baseDirname, file).replace(/\\/g, '/');
+    // fix for windows, if the key contains \ in path
+    // Object.keys method will sadly drop the \.
+    const filePath = file.replace(/\\/g, '/');
     importCode += genImportCode(moduleName, moduleAbsolutePath);
-    moduleProps += genPropsCode(file, moduleName);
+    moduleProps += genPropsCode(filePath, moduleName);
   });
   const requireFnCode = (`
   (function() {
