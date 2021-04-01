@@ -1,4 +1,4 @@
-# rollup-plugin-require-context
+# rollup-plugin-require-context2
 
 rollup plugin for resovling webpack require-context.
 
@@ -15,7 +15,7 @@ Due to this repo has not been updated for quite long time, and have created an i
 ## usage
 
 ```javascript
-import requireContext from 'rollup-plugin-require-context';
+import requireContext from 'rollup-plugin-require-context2';
 
 export default {
   input: 'main.js',
